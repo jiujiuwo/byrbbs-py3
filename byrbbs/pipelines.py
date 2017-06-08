@@ -55,3 +55,18 @@ class ByrbbsArticlePipeline(object):
         con.close()
         return item
 
+class ByrbbsArticleHourPipeline(object):
+    @check_pipline
+    def process_item(self, item, spider):
+        con = pymysql.connect(**DB_CONFIG)
+        cur = con.cursor()
+        sql = 'replace into articleinfohour(section_url,article_title,' \
+              'article_url,article_comment,article_author,article_createtime,updatetime) ' \
+              'values(%s,%s,%s,%s,%s,%s,%s)'
+        values = (item['section_url'], item['article_title'], item['article_url'], item['article_comment'],
+                  item['article_author'], item['article_createtime'], item['updatetime'])
+        cur.execute(sql, values)  # second parameter must be iterabale
+        con.commit()
+        cur.close()
+        con.close()
+        return item

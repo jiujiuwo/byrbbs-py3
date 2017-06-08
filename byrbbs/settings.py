@@ -23,7 +23,7 @@ ROBOTSTXT_OBEY = True
 
 # LOG_ENABLED = False
 LOG_LEVEL = "INFO"
-LOG_FILE = "log_file.txt"
+LOG_FILE = "default_scrapy_log.txt"
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -77,6 +77,7 @@ LOG_FILE = "log_file.txt"
 ITEM_PIPELINES = {
     'byrbbs.pipelines.ByrbbsSectionPipeline': 300,
     'byrbbs.pipelines.ByrbbsArticlePipeline': 400,
+    'byrbbs.pipelines.ByrbbsArticleHourPipeline': 500,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
