@@ -2,7 +2,7 @@
 爬取北邮人论坛所有帖子与板块信息（python3）
 
 基本介绍：
-与https://github.com/ryderchan/byrbbs相似；
+与https://github.com/ryderchan/byrbbs 相似；
 byrbbs中使用的是python2编写，byrbbs-py3使用的是python3；
 实现上都是基于scrapy，但python3下无法使用Mysqldb,更换为pymysql；
 
