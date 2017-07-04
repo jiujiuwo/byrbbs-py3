@@ -55,7 +55,7 @@ class ByrbbsArticleHourSpider(scrapy.Spider):
         for index, url in enumerate(article_url):
             item = ByrbbsArticleItem()
             item['section_url'] = section_url
-            item['article_title'] = article_title[index]
+            item['article_title'] = article_title[index].lower()
             item['article_url'] = response.urljoin(article_url[index])
             item['article_author'] = article_author[index]
             item['article_comment'] = article_comment[index]
