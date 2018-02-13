@@ -5,8 +5,7 @@
 
 - 与https://github.com/ryderchan/byrbbs 功能相似；
 - byrbbs中使用的是python2编写，byrbbs-py3使用的是python3；
-- 实现上都是基于scrapy，但python3下无法使用Mysqldb,更换为pymysql；
-- 代码进一步模块化。
+- 实现上都是基于scrapy，但Mysqldb不支持python3,更换为pymysql；
 
 ## 所需环境与工具
 
