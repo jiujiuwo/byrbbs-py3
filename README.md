@@ -8,6 +8,12 @@
 - 实现上都是基于scrapy，但python3下无法使用Mysqldb,更换为pymysql；
 - 代码进一步模块化。
 
+## 所需环境与工具
+
+- anaconda3(不仅包含python编译器，还有安装scrapy所需的一些基础库)
+- scrapy（爬虫框架）
+- pymysql（连接mysql数据库）
+
 
 ## 功能：
 - 模块1.byrbbs_section:爬取byr.bbs.cn的板块基本信息
